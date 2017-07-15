@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.acer.smartremote.activities.RemoteActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remote Name :"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_on_off"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="22dp"
+        android:background="@android:color/holo_red_dark"
+        android:transitionName="@string/power"
+        app:srcCompat="@android:drawable/ic_lock_power_off"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/btn_increase"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/btn_backward"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:background="@android:color/background_dark"
+        android:transitionName="@string/increase"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/btn_backward"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/btn_increase"
+        android:background="@android:color/background_dark"
+        android:transitionName="@string/backward"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/btn_forward"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btn_increase"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/btn_increase"
+        android:background="@android:color/background_dark"
+        android:onClick="saveForward"
+        android:transitionName="@string/forward"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+
+
+    <ImageButton
+        android:id="@+id/btn_decrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/btn_increase"
+        android:layout_below="@+id/btn_backward"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/background_dark"
+        android:transitionName="@string/decrease"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+</RelativeLayout>
